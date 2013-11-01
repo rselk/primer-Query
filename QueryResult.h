@@ -8,14 +8,14 @@
 
 #include "TextQuery.h"
 
-//friend std::ostream &print(std::ostream&, const QueryResult&);
-
 class QueryResult
 {
   
   friend std::ostream &print(std::ostream&, const QueryResult&);
 
   public:
+    using line_no = TextQuery::line_no;
+
     QueryResult (std::string s, std::shared_ptr<std::set<line_no>> p,
 	std::shared_ptr<std::vector<std::string>> f):
       sought(s), lines(p), file(f) {}

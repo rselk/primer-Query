@@ -10,12 +10,12 @@
 #include <sstream>
 
 
-using line_no = std::vector<std::string>::size_type;
 
 class QueryResult;
 class TextQuery
 {
   public:
+    using line_no = std::vector<std::string>::size_type;
     TextQuery(std::ifstream&);
     QueryResult query(const std::string&) const;
 

@@ -25,18 +25,3 @@ TextQuery::TextQuery(std::ifstream &is) : file (new std::vector<std::string>)
 
 
 
-/*
-void runQueries (std::ifstream &infile)
-{
-  TextQuery tq(infile);
-
-  while (true)
-  {
-    std::cout<<"Enter word to look for: (q to quit) " <<std::endl;
-    std::string input;
-    if (!(std::cin>>input) || input == 'q') break;
-
-    print(std::cout, tq.query(s)) << std::endl;
-  }
-}
-*/

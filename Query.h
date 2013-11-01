@@ -9,6 +9,8 @@
 #include "QueryResult.h"
 #include "QueryBase.h"
 
+std::ostream &operator<<(std::ostream&, const Query&);
+
 class Query
 {
   friend Query operator~(const Query&);
@@ -23,9 +25,7 @@ class Query
       { return q->eval(t); }
     std::string rep() const { return q->rep(); }
     std::shared_ptr<QueryBase> q;
-    
 };
 
-std::ostream &operator<<(std::ostream&, const Query&);
 
 #endif

@@ -20,7 +20,6 @@ class Query
 
   public:
     inline Query(const std::string &s) : q(new WordQuery(s)) {}
-   
     Query(std::shared_ptr<QueryBase> query) : q(query) {}
     QueryResult eval(const TextQuery &t) const
       { return q->eval(t); }

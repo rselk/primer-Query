@@ -4,6 +4,13 @@
 #include <iostream>
 #include <string>
 
+#include "QueryBase.h"
+#include "Query.h"
+
+
+//BinaryQuery does not define eval function
+//BinaryQuery is an abstract base class
+
 class BinaryQuery: public QueryBase
 {
   protected:

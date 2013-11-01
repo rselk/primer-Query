@@ -2,6 +2,7 @@
 #define QUERYBASE_H
 
 #include <string>
+#include "QueryResult.h"
 //QueryBase is an abstract base class
 
 class Query; //usat

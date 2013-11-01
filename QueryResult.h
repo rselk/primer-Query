@@ -10,7 +10,6 @@
 
 class QueryResult
 {
-  
   friend std::ostream &print(std::ostream&, const QueryResult&);
 
   public:
@@ -19,6 +18,21 @@ class QueryResult
     QueryResult (std::string s, std::shared_ptr<std::set<line_no>> p,
 	std::shared_ptr<std::vector<std::string>> f):
       sought(s), lines(p), file(f) {}
+   
+    std::set<line_no>::iterator begin() const
+    {
+      return lines->begin();
+    }
+    
+    std::set<line_no>::iterator end() const
+    {
+      return lines->end();
+    }
+
+    std::shared_ptr<std::vector<std::string>> get_file() const
+    {
+      return file;
+    }
 
   private:
     std::string sought;

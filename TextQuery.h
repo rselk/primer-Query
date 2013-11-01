@@ -10,7 +10,6 @@
 #include <sstream>
 
 
-
 class QueryResult;
 class TextQuery
 {

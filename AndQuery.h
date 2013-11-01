@@ -4,11 +4,11 @@
 #include <iostream>
 #include <string>
 #include <memory>
+#include <algorithm>
 
 #include "BinaryQuery.h"
 #include "Query.h"
 #include "TextQuery.h"
-//more?
 
 class AndQuery: public BinaryQuery
 {

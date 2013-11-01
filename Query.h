@@ -6,7 +6,8 @@
 #include <memory>
 
 #include "TextQuery.h"
-#include "Query_bash.h"
+#include "QueryResult.h"
+#include "QueryBase.h"
 
 class Query
 {
@@ -16,12 +17,15 @@ class Query
 
   public:
     Query(const std::string&);
+   
+    Query(std::shared_ptr<QueryBase> query) : q(query) {}
     QueryResult eval(const TextQuery &t) const
       { return q->eval(t); }
     std::string rep() const { return q->rep(); }
-    Query(std::shared_ptr<Query_base> query) : q(query) {}
-    std::shared_ptr<Query_base> q;
-
+    std::shared_ptr<QueryBase> q;
+    
 };
+
+std::ostream &operator<<(std::ostream&, const Query&);
 
 #endif

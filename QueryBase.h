@@ -1,13 +1,16 @@
 #ifndef QUERYBASE_H
 #define QUERYBASE_H
 
+#include <string>
 //QueryBase is an abstract base class
 
+class Query; //usat
 class QueryBase
 {
+  friend Query; //usat
   protected:
     using line_no = TextQuery::line_no;
-    virtual ~Query_base() = default;
+    virtual ~QueryBase() = default;
 
   private:
     //QueryResult and rep are pure virtual functions

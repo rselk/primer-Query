@@ -23,5 +23,3 @@ TextQuery::TextQuery(std::ifstream &is) : file (new std::vector<std::string>)
   }
 }
 
-
-
